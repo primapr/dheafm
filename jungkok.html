@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Look at this</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      background: linear-gradient(to bottom, #ffb6c1, #ffffff);
+      color: #333;
+      padding: 16px;
+      box-sizing: border-box;
+    }
+
+    .running-text {
+      margin-bottom: 40px;
+      width: 100%;
+      font-size: 30px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .content {
+      display: flex;
+      gap: 40px;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    img, video {
+      width: 250px;             /* ukuran default (desktop) */
+      aspect-ratio: 3 / 4;      /* biar selalu sama proporsi (persegi panjang 3:4) */
+      object-fit: cover;        /* isi penuh tanpa gepeng */
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      max-width: 100%;
+    }
+
+    /* Responsif untuk layar kecil */
+    @media (max-width: 600px) {
+      .content {
+        flex-direction: column;
+        gap: 20px;
+      }
+	  
+	  /* Saat layar kecil (HP) */
+@media (max-width: 600px) {
+  .running-text {
+    font-size: 14px; /* lebih kecil di HP */
+  }
+
+      img, video {
+        width: 90%;         /* isi hampir penuh layar */
+        aspect-ratio: 3 / 4;
+      }
+
+      .running-text {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Running text -->
+  <marquee class="running-text" behavior="scroll" direction="left" scrollamount="15">
+    Selamat Malam Dhea Fitri Mutiara 🌸 | Selamat Istirahat 🌷 | Happy Weekend ✨
+  </marquee>
+
+  <!-- Konten foto & video -->
+  <div class="content">
+    <img src="jk.jpg" alt="Foto Sederhana">
+    <img src="jk1.gif" alt="gif jungkok">
+  </div>
+</body>
+</html>
